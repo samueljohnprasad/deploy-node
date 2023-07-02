@@ -1,7 +1,7 @@
 import * as express from "express";
 import * as mongoose from "mongoose";
 import Shops from "./models/Shop";
-// const cors = require("cors");
+const cors = require("cors");
 
 const app = express();
 // app.use(cors(
@@ -11,6 +11,7 @@ const app = express();
 //         credentials: true
 //     }
 // ));
+app.use(cors());
 app.use(express.json());
 
 const url =
